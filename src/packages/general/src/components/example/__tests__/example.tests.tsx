@@ -2,9 +2,11 @@ import React from 'react';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import { Example } from '../example';
 
-test('default', async () => {
-  render(<Example />);
+describe('<Example />', () => {
+  test('should render properly', async () => {
+    render(<Example />);
 
-  expect(screen).toBeDefined();
-  expect(screen.getByText('Example')).toBeDefined();
+    expect(screen).toBeDefined();
+    expect(screen.getByText('Example')).toBeDefined();
+  });
 });
